@@ -6,7 +6,7 @@ export default function Header() {
         <header>            
             <h1>
                 <HighlightIcon />
-                Keeper                
+                Note Board
             </h1>
         </header>
     );
