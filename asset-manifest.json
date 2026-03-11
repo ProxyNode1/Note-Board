@@ -1,10 +1,13 @@
 {
   "files": {
+    "main.css": "/Note-Board/static/css/main.d80cc44b.css",
     "main.js": "/Note-Board/static/js/main.90b9f8f5.js",
     "index.html": "/Note-Board/index.html",
+    "main.d80cc44b.css.map": "/Note-Board/static/css/main.d80cc44b.css.map",
     "main.90b9f8f5.js.map": "/Note-Board/static/js/main.90b9f8f5.js.map"
   },
   "entrypoints": [
+    "static/css/main.d80cc44b.css",
     "static/js/main.90b9f8f5.js"
   ]
 }
