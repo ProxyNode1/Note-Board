@@ -9,9 +9,18 @@ html {
 }
 
 body {
-  background: #eee;
-  background-color: #ffffee;
-  background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
+  /* background: #eee; */
+  /* background-color: #ffffee; */
+  /* background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png"); */
+  /* background-color:#ffb700;
+  background-image: url("https://www.transparenttextures.com/patterns/noisy-net.png"); */
+
+
+  background-image: url("./Assets/burnt-orange-colored-background_compressed.jpg");
+  background-attachment: fixed;
+  background-position: top left;
+  background-repeat: repeat;
+  background-size: 100%;
 }
 
 header {
@@ -37,6 +46,7 @@ footer {
 footer p {
   color: #ccc;
 }
+
 .note {
   background: #fff;
   border-radius: 7px;
@@ -45,11 +55,19 @@ footer p {
   width: 240px;
   margin: 16px;
   float: left;
+
+  background-image: url("https://www.transparenttextures.com/patterns/lined-paper-2.png");
 }
+
+.note img {
+    width: 50px;
+}
+
 .note h1 {
   font-size: 1.1em;
   margin-bottom: 6px;
 }
+
 .note p {
   font-size: 1.1em;
   margin-bottom: 10px;
@@ -78,6 +96,7 @@ form.create-note {
   border-radius: 7px;
   box-shadow: 0 1px 5px rgb(138, 137, 137);
 }
+
 form.create-note input,
 form.create-note textarea {
   width: 100%;
@@ -102,4 +121,9 @@ form.create-note button {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   outline: none;
+}
+
+.app {
+    border: 5px solid magenta;
+    height: 100%;
 }
