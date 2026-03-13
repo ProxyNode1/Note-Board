@@ -1,11 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Note from "./components/Note";
 import CreateArea from "./components/CreateArea";
 
-export default function App() {
+import "./style.css"
+
+export default function App(props) {
     const [noteList, setNoteList] = useState([]);
+
+    /* const [mousePos, setMousePos] = useState({ "x": "", "y": "" }); */
 
     function addNote(newNote) {
         setNoteList((prevVal) => {
@@ -21,10 +25,16 @@ export default function App() {
         });
     }
 
+    /* function logMousePos(event) {
+        console.log("X " + event.screenX);
+        console.log("Y " + event.screenY);
+    }
+ */
     return (
-        <div>
+        <div className = "app">
             <Header />
             <CreateArea onAdd={addNote} />
+
             {noteList.map((noteItem, index) => {
                 return (
                     <Note
@@ -33,9 +43,20 @@ export default function App() {
                         title={noteItem.title}
                         content={noteItem.content}
                         onDelete={deleteNote}
+                        mousePos = {props.mousePos}
                     />
                 );
             })}
+
+            <Note
+                key={1}
+                index={1}
+                title={"title"}
+                content={"content"}
+                onDelete={deleteNote}
+                mousePos = {props.mousePos}
+            />
+
             <Footer />
         </div>
     );
