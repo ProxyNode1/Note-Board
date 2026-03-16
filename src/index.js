@@ -12,9 +12,11 @@ const root = ReactDOM.createRoot(rootElement);
 const mousePos = { "x": "", "y": "" };
 
 document.addEventListener("mousemove", logMousePos);
+
 function logMousePos(event) {
-    mousePos.x = event.screenX;
-    mousePos.y = event.screenY;
+    mousePos.x = event.pageX;
+    mousePos.y = event.pageY;
+    /* console.log(mousePos); */
 }
 
 let isSelected = false;
@@ -23,7 +25,7 @@ let isSelected = false;
 document.addEventListener("click", handleClick);
 
 function handleClick(event) {
-    if (!isSelected) {        
+    if (!isSelected) {
         handlePickUp(event);
     }
 
@@ -39,7 +41,7 @@ const thumbTackInAudio = new Audio(snd_thumbTackIn);
 const thumbTackOutAudio = new Audio(snd_thumbTackOut);
 
 
-function handlePickUp(event) {    
+function handlePickUp(event) {
     targetNote = event.target;
     if (targetNote.className !== "note") return;
 
@@ -47,15 +49,24 @@ function handlePickUp(event) {
 
     console.log("Note Selected");
     isSelected = true;
-   
+
 }
 
 function handleMove() {
     let style = targetNote.style;
+    let { "marginLeft": leftAdjVal,
+        "marginTop": topAdjVal,
+        "width": notesWidth } = window.getComputedStyle(targetNote);
+
+    // so that the note's mid ends up on the cursor
+    /* leftAdjVal = (parseInt(leftAdjVal, 10) + (parseInt(notesWidth, 10) / 2)); */
+
+    leftAdjVal = parseInt(leftAdjVal, 10);
+    topAdjVal = parseInt(topAdjVal, 10);
 
     style.position = "absolute";
-    style.left = mousePos.x+"px";
-    style.top = mousePos.y+"px";
+    style.left = (mousePos.x - leftAdjVal) + "px";
+    style.top = (mousePos.y - topAdjVal) + "px";
 
     thumbTackInAudio.play();
 
