@@ -44,6 +44,7 @@ export default function App(props) {
                         content={noteItem.content}
                         onDelete={deleteNote}
                         mousePos = {props.mousePos}
+                        zIndex={index}
                     />
                 );
             })}
@@ -55,6 +56,7 @@ export default function App(props) {
                 content={"content"}
                 onDelete={deleteNote}
                 mousePos = {props.mousePos}
+                zIndex={1}
             />
 
             <Footer />
