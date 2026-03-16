@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
+import snd_thumbTackIn from "./Assets/ThumbTack_In.wav";
+import snd_thumbTackOut from "./Assets/Paper_Ripped.wav";
+
+
 const rootElement = document.getElementById('root');
 const root = ReactDOM.createRoot(rootElement);
-
-let isSelected = false;
-console.log(isSelected);
 
 const mousePos = { "x": "", "y": "" };
 
@@ -16,7 +17,11 @@ function logMousePos(event) {
     mousePos.y = event.screenY;
 }
 
+let isSelected = false;
+/* console.log(isSelected); */
+
 document.addEventListener("click", handleClick);
+
 function handleClick(event) {
     if (!isSelected) {        
         handlePickUp(event);
@@ -27,14 +32,22 @@ function handleClick(event) {
     }
 }
 
+
 let targetNote = null;
+
+const thumbTackInAudio = new Audio(snd_thumbTackIn);
+const thumbTackOutAudio = new Audio(snd_thumbTackOut);
+
 
 function handlePickUp(event) {    
     targetNote = event.target;
     if (targetNote.className !== "note") return;
 
+    thumbTackOutAudio.play();
+
     console.log("Note Selected");
-    isSelected = true;    
+    isSelected = true;
+   
 }
 
 function handleMove() {
@@ -43,6 +56,8 @@ function handleMove() {
     style.position = "absolute";
     style.left = mousePos.x+"px";
     style.top = mousePos.y+"px";
+
+    thumbTackInAudio.play();
 
     isSelected = false;
     targetNote = null;
