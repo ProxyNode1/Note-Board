@@ -6,10 +6,8 @@ import CreateArea from "./components/CreateArea";
 
 import "./style.css"
 
-export default function App(props) {
+export default function App() {
     const [noteList, setNoteList] = useState([]);
-
-    /* const [mousePos, setMousePos] = useState({ "x": "", "y": "" }); */
 
     function addNote(newNote) {
         setNoteList((prevVal) => {
@@ -25,11 +23,6 @@ export default function App(props) {
         });
     }
 
-    /* function logMousePos(event) {
-        console.log("X " + event.screenX);
-        console.log("Y " + event.screenY);
-    }
- */
     return (
         <div className = "app">
             {/* <Header /> */}
@@ -43,7 +36,6 @@ export default function App(props) {
                         title={noteItem.title}
                         content={noteItem.content}
                         onDelete={deleteNote}
-                        mousePos = {props.mousePos}
                         zindex={index}
                     />
                 );
@@ -55,8 +47,7 @@ export default function App(props) {
                 title={"title"}
                 content={"content"}
                 onDelete={deleteNote}
-                mousePos = {props.mousePos}
-                zIndex={1}
+                zindex={1}
             /> */}
 
             <Footer />
