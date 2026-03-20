@@ -32,7 +32,7 @@ export default function App(props) {
  */
     return (
         <div className = "app">
-            <Header />
+            {/* <Header /> */}
             <CreateArea onAdd={addNote} />
 
             {noteList.map((noteItem, index) => {
@@ -44,12 +44,12 @@ export default function App(props) {
                         content={noteItem.content}
                         onDelete={deleteNote}
                         mousePos = {props.mousePos}
-                        zIndex={index}
+                        zindex={index}
                     />
                 );
             })}
 
-            <Note
+            {/* <Note
                 key={1}
                 index={1}
                 title={"title"}
@@ -57,7 +57,7 @@ export default function App(props) {
                 onDelete={deleteNote}
                 mousePos = {props.mousePos}
                 zIndex={1}
-            />
+            /> */}
 
             <Footer />
         </div>
