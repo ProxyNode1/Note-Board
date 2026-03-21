@@ -1,13 +1,23 @@
 {
   "files": {
-    "main.css": "/Note-Board/static/css/main.d80cc44b.css",
-    "main.js": "/Note-Board/static/js/main.90b9f8f5.js",
+    "main.css": "/Note-Board/static/css/main.22928fcc.css",
+    "main.js": "/Note-Board/static/js/main.f5eac4b7.js",
+    "static/media/Background.jpg": "/Note-Board/static/media/Background.cb67ca3caaccf3989a88.jpg",
+    "static/media/BulletinPin.png": "/Note-Board/static/media/BulletinPin.a87df9523589a2a98db0.png",
+    "static/media/Typewriter_Finish.wav": "/Note-Board/static/media/Typewriter_Finish.7bfcdf45e9328a51ef63.wav",
+    "static/media/CrumplePaper.wav": "/Note-Board/static/media/CrumplePaper.2e8b1e2e69222e2ee9d6.wav",
+    "static/media/ThumbTack_In.wav": "/Note-Board/static/media/ThumbTack_In.b20ec13137c32a3dfd1a.wav",
+    "static/media/Typewriter_Space.wav": "/Note-Board/static/media/Typewriter_Space.ce9539a293f551095a65.wav",
+    "static/media/Typewriter_2.wav": "/Note-Board/static/media/Typewriter_2.266132e7e938aab90050.wav",
+    "static/media/NoteBackground.jpg": "/Note-Board/static/media/NoteBackground.016e0a02af6f5eb4d2a4.jpg",
+    "static/media/Typewriter_1.wav": "/Note-Board/static/media/Typewriter_1.f4a9072e509946c6ac82.wav",
+    "static/media/Paper_Ripped.wav": "/Note-Board/static/media/Paper_Ripped.734549b208fcbcc2c87a.wav",
     "index.html": "/Note-Board/index.html",
-    "main.d80cc44b.css.map": "/Note-Board/static/css/main.d80cc44b.css.map",
-    "main.90b9f8f5.js.map": "/Note-Board/static/js/main.90b9f8f5.js.map"
+    "main.22928fcc.css.map": "/Note-Board/static/css/main.22928fcc.css.map",
+    "main.f5eac4b7.js.map": "/Note-Board/static/js/main.f5eac4b7.js.map"
   },
   "entrypoints": [
-    "static/css/main.d80cc44b.css",
-    "static/js/main.90b9f8f5.js"
+    "static/css/main.22928fcc.css",
+    "static/js/main.f5eac4b7.js"
   ]
 }
